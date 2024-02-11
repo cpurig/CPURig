@@ -13,10 +13,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@master
       - name: Checkout deps
-        run:  git clone https://github.com/cpurig/cpurig-deps.git
+        run:  git clone https://github.com/xmrig/xmrig-deps.git
       - name: Build project on Windows
         run: |
-          cmake . -G "MinGW Makefiles" -DCPURIG_DEPS=cpurig-deps\gcc\x64
+          cmake . -G "MinGW Makefiles" -DCPURIG_DEPS=xmrig-deps\gcc\x64
           make -j2
           copy src\config.json .
           copy bin\WinRing0\WinRing0x64.sys .
